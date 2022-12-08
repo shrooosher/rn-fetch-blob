@@ -870,15 +870,10 @@ class RNFetchBlobFS {
         try {
             Map<String, String> algorithms = new HashMap<>();
 
-            algorithms.put("md5", "MD5");
-            algorithms.put("sha1", "SHA-1");
-            algorithms.put("sha224", "SHA-224");
-            algorithms.put("sha256", "SHA-256");
-            algorithms.put("sha384", "SHA-384");
-            algorithms.put("sha512", "SHA-512");
+            algorithms.put("sha3512", "SHA3-512");
 
             if (!algorithms.containsKey(algorithm)) {
-                promise.reject("EINVAL", "Invalid algorithm '" + algorithm + "', must be one of md5, sha1, sha224, sha256, sha384, sha512");
+                promise.reject("EINVAL", "Invalid algorithm '" + algorithm + "', must be one of sha3512");
                 return;
             }
 

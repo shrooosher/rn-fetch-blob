@@ -207,7 +207,7 @@ public class RNFetchBlobReq extends BroadcastReceiver implements Runnable {
         String ext = this.options.appendExt.isEmpty() ? "" : "." + this.options.appendExt;
 
         if (this.options.key != null) {
-            cacheKey = RNFetchBlobUtils.getMD5(this.options.key);
+            cacheKey = RNFetchBlobUtils.getHash(this.options.key);
             if (cacheKey == null) {
                 cacheKey = this.taskId;
             }

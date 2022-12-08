@@ -294,7 +294,7 @@ export interface Net {
     removeCookies(domain?: string): Promise<null>;
 }
 
-type HashAlgorithm = "md5" | "sha1" | "sha224" | "sha256" | "sha384" | "sha512";
+type HashAlgorithm = "sha3512";
 export interface FS {
     RNFetchBlobSession: RNFetchBlobSession;
 
